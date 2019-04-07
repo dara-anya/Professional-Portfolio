@@ -17,7 +17,7 @@ $(document).ready(function(){
         $("#welcome").fadeIn(2000);
     },3000);
 
-    setInterval(function(){
+    setTimeout(function(){
         $("#welcome").fadeOut(2000);
     },4000);
 
@@ -37,30 +37,71 @@ $(document).ready(function(){
     $("#location").css("display", "none");
     $("#linkedin").css("display", "none");
     $("#github").css("display", "none");
+    $("#resume").css("display", "none");
     
-    setInterval(function(){
+    setTimeout(function(){
         //$("#line1").css("display", "block");
         //$("#line2").css("display", "block");
 
         $("#header").fadeIn(1000);
         $("#position").fadeIn(2000);
         $("#summary").fadeIn(3000);
-        $("#headshot").fadeIn(4000);
+        $("#resume").fadeIn(4000);
+        $("#headshot").fadeIn(5000);
+
     },7000);
-    setInterval(function(){
+    setTimeout(function(){
         $("#email").fadeIn(1000);
-    },9500);
-    setInterval(function(){
+    },9000);
+    setTimeout(function(){
         $("#phone").fadeIn(1000);
-    },10000);
-    setInterval(function(){
+    },9500);
+    setTimeout(function(){
         $("#location").fadeIn(1000);
-    },10500);
-    setInterval(function(){
+    },10000);
+    setTimeout(function(){
         $("#linkedin").fadeIn(1000);
     },11000);
-    setInterval(function(){
+    setTimeout(function(){
         $("#github").fadeIn(1000);
     },11500);
+
+    $("#divider1").css("display", "none");
+    $("#divider2").css("display", "none");
+    $("#projects").css("display", "none");
+
+    setTimeout(function(){
+        $("#divider1").css("display", "block");
+        $("#projects").fadeIn(1000);
+        $("#divider2").css("display", "block");
+    },12000);
+
+    $("#crystal-collector").css("display", "none");
+    $("#hover1").css("display", "none");
+    $("#crystal").css("display", "none");
+    $("#crystal-game").css("display", "none");
+    $("#crystal-repo").css("display", "none");
+
+    setTimeout(function(){
+        $("#crystal-collector").fadeIn(1000);
+        $("#hover1").fadeIn(1000);
+        $("#crystal").fadeIn(1000);
+        $("#crystal-game").fadeIn(1000);
+        $("#crystal-repo").fadeIn(1000);
+    },13000);
+
+    $("#divider3").css("display", "none");
+    $("#liri-bot").css("display", "none");
+    $("#hover2").css("display", "none");
+    $("#liri").css("display", "none");
+    $("#liri-repo").css("display", "none");
+
+    setTimeout(function(){
+        $("#divider3").css("display", "block");
+        $("#liri-bot").fadeIn(1000);
+        $("#hover2").fadeIn(1000);
+        $("#liri").fadeIn(1000);
+        $("#liri-repo").fadeIn(1000);
+    },14000);
 
 });
