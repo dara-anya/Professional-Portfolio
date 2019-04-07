@@ -104,4 +104,18 @@ $(document).ready(function(){
         $("#liri-repo").fadeIn(1000);
     },14000);
 
+    $("#divider4").css("display", "none");
+    $("#bamazon").css("display", "none");
+    $("#hover3").css("display", "none");
+    $("#bamazon-pic").css("display", "none");
+    $("#bamazon-repo").css("display", "none");
+
+    setTimeout(function(){
+        $("#divider4").css("display", "block");
+        $("#bamazon").fadeIn(1000);
+        $("#hover3").fadeIn(1000);
+        $("#bamazon-pic").fadeIn(1000);
+        $("#bamazon-repo").fadeIn(1000);
+    },15000);
+
 });
