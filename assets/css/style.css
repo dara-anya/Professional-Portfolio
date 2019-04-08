@@ -132,17 +132,29 @@ margin-bottom: 5%;
     text-align: center;
   }
 
-#crystal, #liri, #bamazon-pic{
+#crystal, #liri, #bamazon-pic, #project1-pic, #project2-pic{
     z-index: -1;
 }
-#crystal:hover, #liri:hover, #bamazon-pic:hover{
-    opacity: .5;
+#crystal:hover, 
+#liri:hover, 
+#bamazon-pic:hover, 
+#project1-pic:hover,
+#project2-pic:hover{
+    opacity: .25;
 }
-#crystal:hover + #crystal-description, #liri:hover + #liri-description, #bamazon-pic:hover + #bamazon-description{
+#crystal:hover + #crystal-description, 
+#liri:hover + #liri-description, 
+#bamazon-pic:hover + #bamazon-description, 
+#project1-pic:hover + #project1-description,
+#project2-pic:hover + #project2-description{
     display: block;
 }
 
-#crystal-description, #liri-description, #bamazon-description{
+#crystal-description, 
+#liri-description, 
+#bamazon-description,
+#project1-description,
+#project2-description{
     font-family: 'Montserrat Alternates', sans-serif;
     display: none;
 
@@ -153,22 +165,30 @@ margin-bottom: 5%;
 }
 
 /* BUG FIX: Flickering when hovering over crystal-description */
-    #crystal-description:hover, #liri-description:hover, #bamazon-description:hover{
+    #crystal-description:hover, 
+    #liri-description:hover, 
+    #bamazon-description:hover,
+    #project1-description:hover,
+    #project2-description:hover{
         display: block;
     }
 
-#hover1, #hover2, #hover3{
+#hover1, #hover2, #hover3, #hover4, #hover5{
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 8px;
     text-align: center;
 }
 
 
-#crystal-repo, #liri-repo, #bamazon-repo{
+#crystal-repo, 
+#liri-repo, 
+#bamazon-repo,
+#project1-repo,
+#project2-repo{
     float: right;
 }
 
-#divider3, #divider4{
+#divider3, #divider4, #divider5, #divider6{
     background: rgb(0, 0, 0);
     animation: createBox 1s;
     width: 100%; 
@@ -177,7 +197,8 @@ margin-bottom: 5%;
     margin-bottom: 5%;
 }
 
-#liri-bot, #bamazon{
+#liri-bot, #bamazon, #project1, #project2{
     margin-bottom: 15px;
 }
+
 

@@ -118,4 +118,35 @@ $(document).ready(function(){
         $("#bamazon-repo").fadeIn(1000);
     },15000);
 
+    $("#divider5").css("display", "none");
+    $("#project1").css("display", "none");
+    $("#hover4").css("display", "none");
+    $("#project1-pic").css("display", "none");
+    $("#project1-app").css("display", "none");
+    $("#project1-repo").css("display", "none");
+
+    setTimeout(function(){
+        $("#divider5").css("display", "block");
+        $("#project1").fadeIn(1000);
+        $("#hover4").fadeIn(1000);
+        $("#project1-pic").fadeIn(1000);
+        $("#project1-app").fadeIn(1000);
+        $("#project1-repo").fadeIn(1000);
+    },16000);
+
+    $("#divider6").css("display", "none");
+    $("#project2").css("display", "none");
+    $("#hover5").css("display", "none");
+    $("#project2-pic").css("display", "none");
+    $("#project2-app").css("display", "none");
+    $("#project2-repo").css("display", "none");
+
+    setTimeout(function(){
+        $("#divider6").css("display", "block");
+        $("#project2").fadeIn(1000);
+        $("#hover5").fadeIn(1000);
+        $("#project2-pic").fadeIn(1000);
+        $("#project2-app").fadeIn(1000);
+        $("#project2-repo").fadeIn(1000);
+    },17000);
 });
