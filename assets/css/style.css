@@ -1,3 +1,6 @@
+p{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
 .introduction{
     text-align: center;
     margin-top: 25%;
@@ -200,5 +203,24 @@ margin-bottom: 5%;
 #liri-bot, #bamazon, #project1, #project2{
     margin-bottom: 15px;
 }
+#liri-bot{
+    color: rgb(164, 248, 161);
+    -webkit-text-stroke: .25px;
+    -webkit-text-stroke-color: rgb(9, 255, 0);
+ }
 
-
+#bamazon{
+    color: rgb(248, 203, 161);
+    -webkit-text-stroke: .25px;
+    -webkit-text-stroke-color: rgb(255, 153, 0);
+ }
+ #project1{
+    color: rgb(252, 126, 126);
+    -webkit-text-stroke: .25px;
+    -webkit-text-stroke-color: rgb(255, 0, 0);
+ }
+ #project2{
+    color: rgb(250, 151, 233);
+    -webkit-text-stroke: .25px;
+    -webkit-text-stroke-color: rgb(255, 0, 242);
+ }
