@@ -138,20 +138,6 @@ margin-bottom: 5%;
 #crystal, #liri, #bamazon-pic, #project1-pic, #project2-pic{
     z-index: -1;
 }
-#crystal:hover, 
-#liri:hover, 
-#bamazon-pic:hover, 
-#project1-pic:hover,
-#project2-pic:hover{
-    opacity: .25;
-}
-#crystal:hover + #crystal-description, 
-#liri:hover + #liri-description, 
-#bamazon-pic:hover + #bamazon-description, 
-#project1-pic:hover + #project1-description,
-#project2-pic:hover + #project2-description{
-    display: block;
-}
 
 #crystal-description, 
 #liri-description, 

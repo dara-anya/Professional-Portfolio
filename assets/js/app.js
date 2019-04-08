@@ -149,4 +149,61 @@ $(document).ready(function(){
         $("#project2-app").fadeIn(1000);
         $("#project2-repo").fadeIn(1000);
     },17000);
+
+    setInterval(function(){
+        var $crystal_description = $("#crystal-description");
+        var $crystal = $("#crystal");
+        if($crystal_description.is(":hover") || $crystal.is(":hover")) {
+           $crystal.css("opacity", "0.25");
+           $crystal_description.css("display", "block");
+        }
+        else {
+           $crystal.css("opacity", "1");
+           $crystal_description.css("display", "none");
+        }
+
+        var $liri_description = $("#liri-description");
+        var $liri = $("#liri");
+        if($liri_description.is(":hover") || $liri.is(":hover")) {
+           $liri.css("opacity", "0.25");
+           $liri_description.css("display", "block");
+        }
+        else {
+           $liri.css("opacity", "1");
+           $liri_description.css("display", "none");
+        }
+
+        var $bamazon_description = $("#bamazon-description");
+        var $bamazon_pic = $("#bamazon-pic");
+        if($bamazon_description.is(":hover") || $bamazon_pic.is(":hover")) {
+           $bamazon_pic.css("opacity", "0.25");
+           $bamazon_description.css("display", "block");
+        }
+        else {
+           $bamazon_pic.css("opacity", "1");
+           $bamazon_description.css("display", "none");
+        }
+        
+        var $project1_description = $("#project1-description");
+        var $project1_pic = $("#project1-pic");
+        if($project1_description.is(":hover") || $project1_pic.is(":hover")) {
+           $project1_pic.css("opacity", "0.25");
+           $project1_description.css("display", "block");
+        }
+        else {
+           $project1_pic.css("opacity", "1");
+           $project1_description.css("display", "none");
+        }
+
+        var $project2_description = $("#project2-description");
+        var $project2_pic = $("#project2-pic");
+        if($project2_description.is(":hover") || $project2_pic.is(":hover")) {
+           $project2_pic.css("opacity", "0.25");
+           $project2_description.css("display", "block");
+        }
+        else {
+           $project2_pic.css("opacity", "1");
+           $project2_description.css("display", "none");
+        }
+    }, 0);
 });
