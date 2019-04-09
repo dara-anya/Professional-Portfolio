@@ -61,10 +61,10 @@ $(document).ready(function(){
     },10000);
     setTimeout(function(){
         $("#linkedin").fadeIn(1000);
-    },11000);
+    },10500);
     setTimeout(function(){
         $("#github").fadeIn(1000);
-    },11500);
+    },11000);
 
     $("#divider1").css("display", "none");
     $("#divider2").css("display", "none");

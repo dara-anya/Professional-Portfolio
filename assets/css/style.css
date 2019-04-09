@@ -58,7 +58,7 @@ p{
     float: left;
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left:35%;
+    margin-left: 35%x;
 }
 
 #headshot{
@@ -111,6 +111,8 @@ p{
       transform: scale(1);
     }
   }
+
+
 
 #projects{
     text-align: center;
