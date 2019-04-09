@@ -92,7 +92,6 @@ p{
       margin-left: 10%;
   }
 
-
 #divider1{
     margin-top: 15%;
 }
@@ -153,21 +152,11 @@ margin-bottom: 5%;
     transform: translate(-50%, -50%);
 }
 
-/* BUG FIX: Flickering when hovering over crystal-description */
-    #crystal-description:hover, 
-    #liri-description:hover, 
-    #bamazon-description:hover,
-    #project1-description:hover,
-    #project2-description:hover{
-        display: block;
-    }
-
 #hover1, #hover2, #hover3, #hover4, #hover5{
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 8px;
     text-align: center;
 }
-
 
 #crystal-repo, 
 #liri-repo, 
@@ -209,4 +198,8 @@ margin-bottom: 5%;
     color: rgb(250, 151, 233);
     -webkit-text-stroke: .25px;
     -webkit-text-stroke-color: rgb(255, 0, 242);
+ }
+
+ h3, p{
+     line-height: 1.25;
  }
