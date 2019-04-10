@@ -61,10 +61,10 @@ $(document).ready(function(){
     },10000);
     setTimeout(function(){
         $("#linkedin").fadeIn(1000);
-    },11000);
+    },10500);
     setTimeout(function(){
         $("#github").fadeIn(1000);
-    },11500);
+    },11000);
 
     $("#divider1").css("display", "none");
     $("#divider2").css("display", "none");
@@ -206,4 +206,95 @@ $(document).ready(function(){
            $project2_description.css("display", "none");
         }
     }, 0);
+
+    $(".email-form").css("display", "none");
+
+    $("#email").click(function(event){
+        event.preventDefault();
+        $(".email-form").toggle("slow", "linear");
+        $("#name-required").css("color", "black");
+        $("#message-required").css("color", "black");
+        $("#email-required").css("color", "black");
+      });
+
+    //  Verify that name is only alpha letters
+      function inputAlphaOnly(input) {
+        var value = String.fromCharCode(input.which);
+        var pattern = new RegExp(/[a-zåäö ]/i);
+        return pattern.test(value);
+    }
+    $("#sender-name").bind("keypress", inputAlphaOnly);
+
+    //  Verify that email is properly formatted
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      }
+      
+      function validate() {
+        var $required = $("#email-required");
+        var email = $("#sender-email").val();
+      
+        if (validateEmail(email)) {
+          $required.css("color", "black");
+        } else {
+          $required.css("color", "red");
+        }
+        return false;
+      }
+      $("#send-btn").on("click", validate);
+
+
+    $("#send-btn").click(function(event){
+        event.preventDefault();
+        if ($("#sender-name").val() === "" && $("#sender-email").val() === "" && $("#sender-message").val() === "")
+        {
+            $("#name-required").css("color", "red");
+            $("#email-required").css("color", "red");
+            $("#message-required").css("color", "red");
+        }
+        else if ($("#sender-name").val() === "" && $("#sender-email").val() === "")
+        {
+            $("#name-required").css("color", "red");
+            $("#email-required").css("color", "red");
+            $("#message-required").css("color", "black");
+        }
+        else if ($("#sender-name").val() === "" && $("#sender-message").val() === "")
+        {
+            $("#name-required").css("color", "red");
+            $("#message-required").css("color", "red");
+        }
+        else if ($("#sender-message").val() === "" && $("#sender-email").val() === "")
+        {
+            $("#message-required").css("color", "red");
+            $("#email-required").css("color", "red");
+            $("#name-required").css("color", "black");
+        }
+        else if ($("#sender-message").val() === "")
+        {
+            $("#message-required").css("color", "red");
+            $("#name-required").css("color", "black");
+        }
+        else if ($("#sender-name").val() === "")
+        {
+            $("#name-required").css("color", "red");
+            $("#message-required").css("color", "black");
+        }
+        else if ($("#sender-email").val() === "")
+        {
+            $("#email-required").css("color", "red");
+            $("#name-required").css("color", "black");
+            $("#message-required").css("color", "black");
+        }
+        else
+        {
+        $("#sender-name").val("");
+        $("#sender-email").val("");
+        $("#sender-message").val("");
+        $("#name-required").css("color", "black");
+        $("#message-required").css("color", "black");
+        $("#email-required").css("color", "black");
+        }
+    });
+    
 });
