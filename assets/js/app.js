@@ -238,14 +238,15 @@ $(document).ready(function(){
       
         if (validateEmail(email)) {
           $required.css("color", "black");
-          console.log(validateEmail(email));
         } else {
           $required.css("color", "red");
-          console.log(validateEmail(email));
         }
         return false;
       }
-      $("#send-btn").on("click", validate);
+      $("#sender-email").keyup(function(){
+        validate();
+    })
+      
 
 
     $("#send-btn").click(function(event){
@@ -260,7 +261,6 @@ $(document).ready(function(){
         {
             $("#name-required").css("color", "red");
             $("#email-required").css("color", "red");
-            $("#message-required").css("color", "black");
         }
         else if ($("#sender-name").val() === "" && $("#sender-message").val() === "")
         {
@@ -271,46 +271,38 @@ $(document).ready(function(){
         {
             $("#message-required").css("color", "red");
             $("#email-required").css("color", "red");
-            $("#name-required").css("color", "black");
         }
         else if ($("#sender-message").val() === "")
         {
             $("#message-required").css("color", "red");
-            $("#name-required").css("color", "black");
         }
         else if ($("#sender-name").val() === "")
         {
             $("#name-required").css("color", "red");
-            $("#message-required").css("color", "black");
         }
         else if ($("#sender-email").val() === "")
         {
             $("#email-required").css("color", "red");
-            $("#name-required").css("color", "black");
-            $("#message-required").css("color", "black");
         }
-        else if ($("#sender-name").val() !== "" && $("#sender-message").val() === "")
+        else if ($("#email-required").css("color") == "rgb(0, 0, 0)" && $("#message-required").css("color") == "rgb(0, 0, 0)" && $("#name-required").css("color") == "rgb(0, 0, 0)")
         {
-            $("#name-required").css("color", "black");
-            $("#message-required").css("color", "black");
-        }
-        else 
-        {
-        $("#sender-name").val("");
-        $("#sender-email").val("");
-        $("#sender-message").val("");
-        $("#message-required").css("color", "black");
-        $("#name-required").css("color", "black");
-        $("#email-required").css("color", "black");
-        console.log("All good");
+            $("#sender-name").val("");
+            $("#sender-email").val("");
+            $("#sender-message").val("");
+            $("#chars").text(300);
         }
     });
 
     var maxLength = 300;
-    $('textarea').keyup(function() {
+    $("textarea").keyup(function() {
         var length = $(this).val().length;
         var length = maxLength-length;
-        $('#chars').text(length);
+        $("#chars").text(length);
+        $("#message-required").css("color","black");
       });
+
+      $("#sender-name").keyup(function(){
+          $("#name-required").css("color", "black");
+      })
     
 });
