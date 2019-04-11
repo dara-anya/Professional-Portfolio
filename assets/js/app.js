@@ -212,9 +212,9 @@ $(document).ready(function(){
     $("#email").click(function(event){
         event.preventDefault();
         $(".email-form").toggle("slow", "linear");
-        $("#name-required").css("color", "black");
-        $("#message-required").css("color", "black");
-        $("#email-required").css("color", "black");
+        // $("#name-required").css("color", "black");
+        // $("#message-required").css("color", "black");
+        // $("#email-required").css("color", "black");
       });
 
     //  Verify that name is only alpha letters
@@ -231,14 +231,17 @@ $(document).ready(function(){
         return re.test(email);
       }
       
+      
       function validate() {
         var $required = $("#email-required");
         var email = $("#sender-email").val();
       
         if (validateEmail(email)) {
           $required.css("color", "black");
+          console.log(validateEmail(email));
         } else {
           $required.css("color", "red");
+          console.log(validateEmail(email));
         }
         return false;
       }
@@ -286,15 +289,28 @@ $(document).ready(function(){
             $("#name-required").css("color", "black");
             $("#message-required").css("color", "black");
         }
-        else
+        else if ($("#sender-name").val() !== "" && $("#sender-message").val() === "")
+        {
+            $("#name-required").css("color", "black");
+            $("#message-required").css("color", "black");
+        }
+        else 
         {
         $("#sender-name").val("");
         $("#sender-email").val("");
         $("#sender-message").val("");
-        $("#name-required").css("color", "black");
         $("#message-required").css("color", "black");
+        $("#name-required").css("color", "black");
         $("#email-required").css("color", "black");
+        console.log("All good");
         }
     });
+
+    var maxLength = 300;
+    $('textarea').keyup(function() {
+        var length = $(this).val().length;
+        var length = maxLength-length;
+        $('#chars').text(length);
+      });
     
 });

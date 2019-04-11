@@ -1,4 +1,4 @@
-p, button, input, textarea{
+p, button, input, textarea, span{
     font-family: 'Montserrat Alternates', sans-serif;
 }
 .introduction{
@@ -82,6 +82,9 @@ textarea{
     resize: vertical;
 }
 
+#chars{
+    float: right;
+}
 #send-btn {
     background-color: rgb(255, 255, 255);
     border: none;
