@@ -208,13 +208,11 @@ $(document).ready(function(){
     }, 0);
 
     $(".email-form").css("display", "none");
+    $("#sent").css("display", "none");
 
     $("#email").click(function(event){
         event.preventDefault();
         $(".email-form").toggle("slow", "linear");
-        // $("#name-required").css("color", "black");
-        // $("#message-required").css("color", "black");
-        // $("#email-required").css("color", "black");
       });
 
     //  Verify that name is only alpha letters
@@ -248,6 +246,17 @@ $(document).ready(function(){
     })
       
 
+    var maxLength = 300;
+    $("textarea").keyup(function() {
+        var length = $(this).val().length;
+        var length = maxLength-length;
+        $("#chars").text(length);
+        $("#message-required").css("color","black");
+      });
+
+      $("#sender-name").keyup(function(){
+          $("#name-required").css("color", "black");
+      })
 
     $("#send-btn").click(function(event){
         event.preventDefault();
@@ -286,23 +295,39 @@ $(document).ready(function(){
         }
         else if ($("#email-required").css("color") == "rgb(0, 0, 0)" && $("#message-required").css("color") == "rgb(0, 0, 0)" && $("#name-required").css("color") == "rgb(0, 0, 0)")
         {
-            $("#sender-name").val("");
-            $("#sender-email").val("");
-            $("#sender-message").val("");
-            $("#chars").text(300);
+            setTimeout(function(){
+                $("label").css("opacity", "0.25");
+                $("input").css("opacity", "0.25");
+                $("textarea").css("opacity", "0.25");
+                $("span").css("opacity", "0.25");
+                $("button").css("opacity", "0.25");
+                $("#name-required").css("opacity", "0.25");
+                $("#email-required").css("opacity", "0.25");
+                $("#message-required").css("opacity", "0.25");
+                $("#sent").fadeIn(1000);
+            },500);
+            setTimeout(function(){
+                $("#sender-name").val("");
+                $("#sender-email").val("");
+                $("#sender-message").val("");
+                $("#chars").text(300);
+                $(".email-form").toggle("slow", "linear");
+            },2000);
+            setTimeout(function(){
+                $("label").css("opacity", "1");
+                $("input").css("opacity", "1");
+                $("textarea").css("opacity", "1");
+                $("span").css("opacity", "1");
+                $("button").css("opacity", "1");
+                $("#name-required").css("opacity", "1");
+                $("#email-required").css("opacity", "1");
+                $("#message-required").css("opacity", "1");
+                $("#sent").fadeOut(1000);
+            },2500)
+            
         }
     });
 
-    var maxLength = 300;
-    $("textarea").keyup(function() {
-        var length = $(this).val().length;
-        var length = maxLength-length;
-        $("#chars").text(length);
-        $("#message-required").css("color","black");
-      });
-
-      $("#sender-name").keyup(function(){
-          $("#name-required").css("color", "black");
-      })
+    
     
 });
